@@ -1,5 +1,8 @@
 package AB7;
 
+/**
+ * Ein Knoten in einem Binärbaum.
+ */
 public class Node<T>{
 	
 	private T data;
@@ -8,8 +11,6 @@ public class Node<T>{
 	
 	public Node<T> right;
 	
-	public Node<T> parent;
-
 	public T getData() {
 		return data;
 	}

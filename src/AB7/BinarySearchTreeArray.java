@@ -14,38 +14,51 @@ public class BinarySearchTreeArray<T extends Comparable<T>> extends BinarySearch
 		addNodeRecursive(1, node);
 	}
 	
-	private boolean addNodeRecursive(int index, Node<T> node)
+	private void addNodeRecursive(int index, Node<T> node)
 	{
 		if(array[index] == null)
 		{
 			array[index] = node;
-			return true;
+			return;
 		}
-		else if(node.getData().compareTo(array[index].getData()) == 1)
+		
+		int compare = node.getData().compareTo(array[index].getData());
+		if(compare == 1)
 		{
 			if(((index * 2) + 1) > array.length)
 			{
 				enlargeArray();
 			}
-			boolean addedLeaf = addNodeRecursive((index * 2) + 1, node);
-			if(addedLeaf)
+			if(array[index].right == null)
 			{
 				array[index].right = node;
+				array[index * 2 + 1] = node;
+			}
+			else
+			{
+				addNodeRecursive(index * 2 + 1, node);
 			}
 		}
-		else
+		else if(compare == -1)
 		{
 			if(index * 2 > array.length)
 			{
 				enlargeArray();
 			}
-			boolean addedLeaf = addNodeRecursive(index * 2, node);
-			if(addedLeaf)
+			if(array[index].left == null)
 			{
 				array[index].left = node;
+				array[index * 2] = node;
+			}
+			else
+			{
+				addNodeRecursive(index * 2, node);
 			}
 		}
-		return false;
+		else
+		{
+			throw new IllegalArgumentException();
+		}
 	}
 	
 	private void enlargeArray()

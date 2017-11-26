@@ -1,5 +1,22 @@
 package AB7;
 
+/**
+ * Reihenfolge für die Ausgabe der Knoten.
+ */
 public enum NodeOrder {
-	INORDER, PREORDER, POSTORDER
+	
+	/**
+	 * Symmetrisch
+	 */
+	INORDER,
+	
+	/**
+	 * Hauptreihenfolge
+	 */
+	PREORDER, 
+	
+	/**
+	 * Nebenreihenfolge
+	 */
+	POSTORDER;
 }

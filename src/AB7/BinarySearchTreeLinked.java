@@ -23,7 +23,8 @@ public class BinarySearchTreeLinked<T extends Comparable<T>> extends BinarySearc
 	
 	private void addNodeRecursive(Node<T> root, Node<T> node)
 	{
-		if (node.getData().compareTo(root.getData()) == 1)
+		int compare = node.getData().compareTo(root.getData());
+		if (compare == 1)
 		{
 			if (root.right == null)
 			{
@@ -34,7 +35,7 @@ public class BinarySearchTreeLinked<T extends Comparable<T>> extends BinarySearc
 				addNodeRecursive(root.right, node);
 			}
 		}
-		else
+		else if(compare == -1)
 		{
 			if (root.left == null)
 			{
@@ -44,6 +45,10 @@ public class BinarySearchTreeLinked<T extends Comparable<T>> extends BinarySearc
 			{
 				addNodeRecursive(root.left, node);
 			}
+		}
+		else
+		{
+			throw new IllegalArgumentException();
 		}
 	}
 
