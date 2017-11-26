@@ -1,6 +1,6 @@
 package AB7;
 
-public class Node<T extends Comparable<T>>{
+public class Node<T>{
 	
 	private T data;
 	
