@@ -1,5 +1,0 @@
-
-public enum Reihenfolge
-{
-	HAUPTREIHENFOLGE, NEBENREIHENFOLGE, SYMMETRISCH;
-}
