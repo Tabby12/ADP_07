@@ -60,7 +60,10 @@ public class BinarySearchTreeArray<T extends Comparable<T>> extends BinarySearch
 			throw new IllegalArgumentException();
 		}
 	}
-	
+	/**
+	 * Verdoppelt die Groesse des Arrays in dem die Knoten des
+	 * Baumes gespeichert sind.
+	 */
 	private void enlargeArray()
 	{
 		Node<T>[] newArray = new Node[array.length * 2];
