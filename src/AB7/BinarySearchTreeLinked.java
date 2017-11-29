@@ -1,9 +1,18 @@
 package AB7;
 
+/**
+ * Implementierung eines Binärbaums durch Verlinkung der Knoten.
+ */
 public class BinarySearchTreeLinked<T extends Comparable<T>> extends BinarySearchTreeBase<T> {
 	
+	/**
+	 * Startknoten.
+	 */
 	private Node<T> root;
 
+	/**
+	 * Konstruktor.
+	 */
 	public BinarySearchTreeLinked()
 	{
 		root = null;

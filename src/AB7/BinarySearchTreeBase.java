@@ -1,5 +1,8 @@
 package AB7;
 
+/**
+ * Basisklasse für gemeinsame Methoden der Binären Suchbaum Implementierungen.
+ */
 public abstract class BinarySearchTreeBase<T extends Comparable<T>> implements BinarySearchTree<T> {
 	
 	/**

@@ -1,5 +1,8 @@
 package AB7;
 
+/**
+ * Schnittstelle für einen binären Suchbaum.
+ */
 public interface BinarySearchTree<T extends Comparable<T>> {
 	/**
 	 * Fuegt dem Baum einen Knoten hinzu. Bei Elementen die kleiner als der

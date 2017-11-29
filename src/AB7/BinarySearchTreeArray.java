@@ -1,9 +1,18 @@
 package AB7;
 
+/**
+ * Implementierung eines Binärbaums durch Arrayeinbettung.
+ */
 public class BinarySearchTreeArray<T extends Comparable<T>> extends BinarySearchTreeBase<T>{
 	
+	/**
+	 * Entält die Knoten im Binärbaum.
+	 */
 	Node<T>[] array;
 	
+	/**
+	 * Konstruktor.
+	 */
 	public BinarySearchTreeArray() 
 	{
 		array = new Node[10];
@@ -14,6 +23,7 @@ public class BinarySearchTreeArray<T extends Comparable<T>> extends BinarySearch
 		addNodeRecursive(1, node);
 	}
 	
+
 	private void addNodeRecursive(int index, Node<T> node)
 	{
 		if(array[index] == null)
